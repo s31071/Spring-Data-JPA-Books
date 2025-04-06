@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: "TPO4"
+
+  jpa:
+    databaseplatform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  h2:
+    console:
+      path: /my-console
+      enabled: true
+
+  datasource:
+    url: jdbc:h2:file:./workspace/books_db
+    username: s31071
+    password: test
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:sql-data/data.sql
